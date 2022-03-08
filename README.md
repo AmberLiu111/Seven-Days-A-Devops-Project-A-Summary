@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-test_again
- test if added
-varify git push/pull
-=======
 # Record my Devops skill development path
-test git pull command
-test again
->>>>>>> 2fc70308b3c05a8da27eff3d020cb26df347f947
-don't know if it's recovered
+new starting
+git pull origin master --allow-unrelated-histories
+git merge origin origin/master
+... add and commit here...
+git push origin master
+git branch -a
+git checkout master
+git checkout -b master
