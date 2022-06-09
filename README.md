@@ -1,4 +1,4 @@
-# Record my Devops skill development path
+# Devops basic skills
 new starting
 git pull origin master --allow-unrelated-histories
 git merge origin origin/master
