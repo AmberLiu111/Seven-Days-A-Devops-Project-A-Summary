@@ -1,1 +1,1 @@
-A place of sharing devops skill basics
+A place to share devops skill basics
