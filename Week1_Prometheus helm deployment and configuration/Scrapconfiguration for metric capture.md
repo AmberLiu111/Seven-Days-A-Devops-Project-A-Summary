@@ -80,7 +80,7 @@ server:
 
 Below are four example scrape configurations that allow you to define targets and monitor corresponding metrics:
 
-**Target 1: Ingress Endpoints
+**Target 1**: Ingress Endpoints
 
 ```
 - job_name: 'ingress-endpoints'
@@ -114,7 +114,7 @@ Below are four example scrape configurations that allow you to define targets an
 
 Then you will see the responding target definition and the following metrics explorer
 ![[Pasted image 20240528194829.png]]
-***Target-2: kubernetes-nodes
+**Target-2**: kubernetes-nodes
 ```
 - job_name: 'kubernetes-nodes'
   authorization:
@@ -141,7 +141,7 @@ Then you will see the responding target definition and the following metrics exp
 Then you will see the responding target definition and the following metrics explorer
 ![[Pasted image 20240528200012.png]]
 
-**Target-3: Cadvisor
+**Target-3**: Cadvisor
 **cAdvisor** is integrated into the kubelet on each node and provides container metrics. Prometheus can scrape cAdvisor directly
 ```
 scrape_configs:
@@ -166,7 +166,7 @@ scrape_configs:
 ```
 Then you will see the responding target definition and the following metrics explorer:
 ![[Pasted image 20240528195636.png]]
-**Target-4: kube-state-metrics
+**Target-4**: kube-state-metrics
 
 If you need to collect Kubernetes state metrics (like pod and container statuses), kube-state-metrics is essential. It serves as the bridge between Kubernetes API data and Prometheus, which does not inherently understand Kubernetes object states without this additional service. Once kube-state-metrics is deployed and correctly configured in Prometheus, you should start seeing the desired metrics in your Prometheus instance
 
