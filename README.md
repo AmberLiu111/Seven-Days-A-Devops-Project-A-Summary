@@ -1,2 +1,1 @@
-A place to share devops skill basics
-test
+This repository is dedicated to exploring a DevOps topic—be it a tool, practice, or skill—over the period of one week. The goal is to deepen understanding through practical exploration and summarization.
