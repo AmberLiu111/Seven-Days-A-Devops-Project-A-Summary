@@ -113,7 +113,7 @@ Below are four example scrape configurations that allow you to define targets an
 ```
 
 Then you will see the responding target definition and the following metrics explorer
-![[Pasted image 20240528194829.png]]
+![[nginx_ingress metrics.png]]
 **Target-2**: kubernetes-nodes
 ```
 - job_name: 'kubernetes-nodes'
@@ -139,7 +139,7 @@ Then you will see the responding target definition and the following metrics exp
 
 ```
 Then you will see the responding target definition and the following metrics explorer
-![[Pasted image 20240528200012.png]]
+![[node metrics.png]]
 
 **Target-3**: Cadvisor
 **cAdvisor** is integrated into the kubelet on each node and provides container metrics. Prometheus can scrape cAdvisor directly
@@ -165,7 +165,7 @@ scrape_configs:
 
 ```
 Then you will see the responding target definition and the following metrics explorer:
-![[Pasted image 20240528195636.png]]
+![[Container Metrics.png]]
 **Target-4**: kube-state-metrics
 
 If you need to collect Kubernetes state metrics (like pod and container statuses), kube-state-metrics is essential. It serves as the bridge between Kubernetes API data and Prometheus, which does not inherently understand Kubernetes object states without this additional service. Once kube-state-metrics is deployed and correctly configured in Prometheus, you should start seeing the desired metrics in your Prometheus instance
@@ -190,7 +190,7 @@ scrape_configs:
 ```
 
 Then you will see the responding target definition and the following metrics explorer:
-![[Pasted image 20240528195825.png]]
+![[kube resources metrics.png]]
 
 
 **Reference:** For more details on Prometheus scrape configuration, visit the[scrape_configs](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config)
