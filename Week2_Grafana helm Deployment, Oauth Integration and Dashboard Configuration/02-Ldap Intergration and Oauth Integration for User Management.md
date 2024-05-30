@@ -1,4 +1,5 @@
 ![Grafana_OAuth_Integration](pics/Grafana_OAuth_Integration.png)
+
 This guide outlines how administrators can manage user access within or outside the organization during Grafana deployment.
 
 #### 1. Setting Up the Admin User
@@ -131,29 +132,9 @@ data:
 **Step-2: Deploy helm using the following parameters in the values.yaml:**
 
 ```
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: ldap-config
-data:
-  ldap.toml: |-
-    [[servers]]
-    host = "ldap"
-    port = 389
-    use_ssl = false
-    start_tls = false
-    ssl_skip_verify = false
-    bind_dn = "cn=admin,dc=example,dc=org"
-    bind_password = 'admin'
-    search_filter = "(uid=%s)"
-    search_base_dns = ["ou=People,dc=support,dc=example,dc=org"]
-
-    [servers.attributes]
-    name = "givenName"
-    surname = "sn"
-    username = "cn"
-    member_of = "memberOf"
-    email = "email"
+ldap.enabled=true
+ldap.configMapName=ldap-config
+ldap.allowSignUp=true
 
 ```
 This setup provides a secure and streamlined method for managing user access to the Grafana dashboard.
