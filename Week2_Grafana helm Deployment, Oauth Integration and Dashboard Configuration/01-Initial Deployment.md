@@ -60,6 +60,6 @@ automountServiceAccountToken: false
 helm install my-release oci://registry-1.docker.io/bitnamicharts/grafana -f values.yaml
 ```
 
-Nextly, I will continue introducing the custom configuration for Grafana Oauth Integration and Dashboard configuration.
+Nextly, I will continue introducing the custom configuration for Grafana User management(Oauth&Ldap integration) and Dashboard configuration.
 
 **Reference:** For more details on Grafana configuration, see the [Parameters](https://github.com/bitnami/charts/tree/main/bitnami/grafana#parameters) section, More info at [Grafana documentation](https://grafana.com/docs/grafana/latest/administration/provisioning/#dashboards).
