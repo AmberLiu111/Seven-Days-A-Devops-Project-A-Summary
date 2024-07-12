@@ -1,3 +1,4 @@
+![ingress_controller](pics/ingress_controller.png)
 Ingress controllers play a critical role in managing access to services within a Kubernetes environment. They act as a gateway for external traffic, routing requests to the appropriate services based on the rules defined in Ingress resources. I want to use this article to provides a basic comparison of popular ingress controller proxy base—NGINX, HAProxy, Envoy, and introduces configuration insights and examples for Ingress-nginx, HAProxy Ingress and Contour Ingress controllers.
 
 ## 1. Ingress controller comparing:

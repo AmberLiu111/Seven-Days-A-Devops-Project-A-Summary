@@ -1,3 +1,4 @@
+![Istio](pics/Istio_servicemesh_gatewayapi.png)
 Before we delve into the specifics of Service Mesh and Gateway API, it's important to consider the following three questions. Understanding these will clarify why integrating Service Mesh with Gateway API is considered an advanced method for exposing Kubernetes APIs externally.
 ## What's the difference between Gateway API and an API Gateway?
 
