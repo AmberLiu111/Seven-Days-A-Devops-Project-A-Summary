@@ -4,7 +4,7 @@
 When SREs or Infrastructure Engineers set up, migrate, or update Kubernetes clusters, one critical aspect to consider is the networking traffic flow. The diagram provided illustrates a basic network traffic flow for exposing the Kubernetes API externally, incorporating various network components to enhance performance, security, and scalability. Depending on the cloud platform hosting the Kubernetes cluster, the selection of network components can vary to meet specific requirements. Advanced and complex configurations may also be introduced based on real needs. In this guide, I will delve into each component's details and provide examples to integrate these components effectively on both Google Cloud Platform (GCP) and Amazon Web Services (AWS).
 
 
-## **1. DNS
+## **1. DNS**
 
 **Host Zone**: A DNS host zone is a portion of the DNS namespace that is managed by a specific organization or administrator. It encompasses all the DNS records for a particular domain and is essential for controlling domain routing.
 
@@ -58,7 +58,7 @@ A Content Delivery Network (CDN) is vital for enhancing user experience on high-
 
 - **Internal Load Balancer**: Facilitates load balancing of traffic to internal Google Cloud VMs without exposing them to the public internet. It operates at the transport layer (Layer 4 - TCP/UDP) and is optimized for scenarios where you need to balance additional loads without external exposure.
 
-## **4. TLS/SSL Certificate
+## **4. TLS/SSL Certificate**
 
 ### **Step-by-Step Process to Generate a CSR:**
 
@@ -96,6 +96,7 @@ To import a certificate into Google Certificate Manager:
 - Go to Security -> Certificate Manager.
 - Click on “Create Certificate.”
 - Choose “Import” and upload your certificate file and private key. 
+
 (2)**AWS Certificate Manager:**
 
 To import a certificate into AWS Certificate Manager:
@@ -164,6 +165,7 @@ spec:
 - `service.beta.kubernetes.io/aws-load-balancer-backend-protocol`: Indicates the protocol used by the backend (instance). Typical values are `http`, `https`, `ssl`, and `tcp`.
 - `service.beta.kubernetes.io/aws-load-balancer-ssl-cert`: Needed if you want AWS to terminate SSL/TLS, not typically necessary if you are handling TLS termination at the ingress level.
 More annotations for AWS, please go https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.3/guide/service/annotations/
+
 (3)**Ingress on GCP with Annotation to Use Cert from Google Certificate Manager:**
 ```
 apiVersion: networking.k8s.io/v1  

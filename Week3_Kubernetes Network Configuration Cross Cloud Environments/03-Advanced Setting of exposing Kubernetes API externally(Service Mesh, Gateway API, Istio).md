@@ -1,5 +1,5 @@
 Before we delve into the specifics of Service Mesh and Gateway API, it's important to consider the following three questions. Understanding these will clarify why integrating Service Mesh with Gateway API is considered an advanced method for exposing Kubernetes APIs externally.
-## What's the difference between Gateway API and an API Gateway?[¶](https://gateway-api.sigs.k8s.io/#whats-the-difference-between-gateway-api-and-an-api-gateway "Permanent link")
+## What's the difference between Gateway API and an API Gateway?
 
 An API Gateway is a general concept that describes anything that exposes capabilities of a backend service, while providing extra capabilities for traffic routing and manipulation, such as load balancing, request and response transformation, and sometimes more advanced features like authentication and authorization, rate limiting, and circuit breaking.
 
@@ -55,16 +55,16 @@ Below are several renowned Gateway API controllers you might consider:
   - Kong Gateway can operate as a Gateway API controller, leveraging its robust API management features. Kong provides plugins and features that manage traffic, security, and monitoring, aligning well with the Gateway API’s goal of more expressive routing capabilities.
 
 - **Contour**
- - Contour is an open-source Kubernetes ingress controller using Envoy proxy. It is one of the early adopters of the Gateway API, providing full support for its resources. Contour focuses on easy configuration, raw HTTP and HTTPS routing, and was developed with an emphasis on simplicity and clarity.
+  - Contour is an open-source Kubernetes ingress controller using Envoy proxy. It is one of the early adopters of the Gateway API, providing full support for its resources. Contour focuses on easy configuration, raw HTTP and HTTPS routing, and was developed with an emphasis on simplicity and clarity.
 
 - **Traefik**
- - Traefik is a popular cloud-native ingress controller known for its simplicity and configurability. It also supports the Gateway API, allowing users to benefit from Traefik's dynamic configuration capabilities and extensive middleware support while leveraging the standardization offered by the Gateway API.
+  - Traefik is a popular cloud-native ingress controller known for its simplicity and configurability. It also supports the Gateway API, allowing users to benefit from Traefik's dynamic configuration capabilities and extensive middleware support while leveraging the standardization offered by the Gateway API.
 
 - **Gloo**
- - Gloo Edge, developed by Solo.io, is an API gateway and ingress controller built on Envoy Proxy. It supports the Gateway API and is designed for high-performance environments. Gloo integrates well with both traditional VM-based applications and newer Kubernetes-based applications.
+  - Gloo Edge, developed by Solo.io, is an API gateway and ingress controller built on Envoy Proxy. It supports the Gateway API and is designed for high-performance environments. Gloo integrates well with both traditional VM-based applications and newer Kubernetes-based applications.
 
 - **Ambassador**
- - Ambassador API Gateway is another Envoy-based ingress controller that supports the Gateway API. It is particularly well-suited for microservices architectures and provides extensive features around traffic management, security, and observability.
+  - Ambassador API Gateway is another Envoy-based ingress controller that supports the Gateway API. It is particularly well-suited for microservices architectures and provides extensive features around traffic management, security, and observability.
 
 ## 2. Service Mesh 
 A service mesh is an infrastructure layer that allows you to manage communication between microservices. It handles things like routing, load balancing, and service discovery, and can provide features like observability, security, and resiliency. This is typically implemented with a set of network proxies that sit next to application pods and implement the necessary headers/routing/traces/global DNS/etc - all without changes to application code.
