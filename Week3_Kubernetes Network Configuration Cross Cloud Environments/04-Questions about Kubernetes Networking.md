@@ -1,0 +1,6 @@
+[Blog post: What is a domain name?](https://www.lifewire.com/what-is-a-domain-name-2483189)  
+[Blog post: SSL vs TLS, what's the difference?](https://luxsci.com/blog/ssl-versus-tls-whats-the-difference.html)  
+[Tutorial: How SSL and TLS encryption works](http://computer.howstuffworks.com/encryption4.htm)  
+[Blog post: What is a Domain Name Server?](https://www.lifewire.com/what-is-a-dns-server-817513)  
+[Video: How DNS works](https://www.youtube.com/watch?v=GlZC4Jwf3xQ)  
+[Video: A Tour of TLS](https://www.youtube.com/watch?v=yzz3bcnWf7M)
